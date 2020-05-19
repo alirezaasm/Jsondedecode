@@ -13,8 +13,7 @@ public class JWTUtils {
             Log.i("split(0)",getJson(split[0]));
             Log.i("split(1)",getJson(split[1]));
 
-            return "header:"+getJson(split[0])+"PAYLOAD:"+"\n\n\n\n\n"+getJson(split[1])+"VERIFY SIGNATURE\n" +
-                    "\n"+"\n\n\n"+getJson(split[2]);
+            return "header:"+"\n"+getJson(split[0])+"\n\n\n\n\n"+"PAYLOAD:"+getJson(split[1])+"\n\n\n\n"+"VERIFY SIGNATURE"+"\n"+getJson(split[2]);
         } catch (UnsupportedEncodingException e) {
             return  "failed";
 
