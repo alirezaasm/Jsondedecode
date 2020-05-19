@@ -10,8 +10,11 @@ public class JWTUtils {
     public static String decoded(String JWTEncoded) throws Exception {
         try {
             String[] split = JWTEncoded.split("\\.");
+            Log.i("split(0)",getJson(split[0]));
+            Log.i("split(1)",getJson(split[1]));
 
-            return getJson(split[0])+"\n"+getJson(split[1]);
+            return "header:"+getJson(split[0])+"PAYLOAD:"+"\n\n\n\n\n"+getJson(split[1])+"VERIFY SIGNATURE\n" +
+                    "\n"+"\n\n\n"+getJson(split[2]);
         } catch (UnsupportedEncodingException e) {
             return  "failed";
 
